@@ -1,5 +1,7 @@
 `wait` is a really small (<5MB) Docker utility that blocks until another container is accepting TCP connections, and errors-out if it cannot connect within a given timeout. It can be used to ensure that a service is up and running before starting another service that depends on it.
 
+**NOTE: _as of Docker v29.0 the default operation and the -p parameter are no longer functional, you have to use the -c parameter._**
+
 The default operation looks up all the `EXPOSE`d ports of all the linked containers and waits for them
 
 ```shell
